@@ -3,9 +3,10 @@
 2. HTTP Method(POST, GET, PUT, DELETE, PATCH 등)를 통해
 3. 해당 자원(URI)에 대한 CRUD Operation을 적용하는 것을 의미합니다.
 
-**CRUD Operation이란** <br>
+> **CRUD Operation이란** <br>
 CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말로
 REST에서의 CRUD Operation 동작 예시는 다음과 같다.
+
 
 + Create : 데이터 생성(POST) <br>
 + Read : 데이터 조회(GET) <br>
