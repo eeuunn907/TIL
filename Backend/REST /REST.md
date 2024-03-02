@@ -1,4 +1,4 @@
-REST란?
+**REST란?**
 
 1. HTTP URI(Uniform Resource Identifier)를 통해 자원(Resource)을 명시하고,
 2. HTTP Method(POST, GET, PUT, DELETE, PATCH 등)를 통해
