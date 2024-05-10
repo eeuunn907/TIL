@@ -6,8 +6,44 @@
 
 SOLID라고 부르는 5가지 설계원칙이 존재한다
 
-**SRP (Single Responsibility) 단일 책임 원칙**
-**OCP (Open-Closed) 개방-폐쇄 원칙**
-**LSP (Liskov Substitution) 리스코프 치환 원칙**
-**ISP (Interface Segregation) 인터페이스 분리 원칙**
-**DIP (Dependency Inversion) 의존 역전 원칙**
+**SRP (Single Responsibility) 단일 책임 원칙** <br>
+"하나의 객체 또는 메소드는 하나의 책임만을 가져야한다." <br>
+클래스 또는 메소드의 응집성을 높이고, 클래스 간의 결합도를 낮추는데 목적이 있다. 클래스가 하나의 책임에만 집중하게 되면, 해당 책임에 대한 변경이 필요할 때 다른 부분에 영향을 덜 주기 때문에 코드의 유지보수성과 확장성이 높아진다.
+```java
+//AreaCalculrator
+public class AreaCalculrator{
+    private final int width;
+    private final int height;
+
+    public AreaCalculrator(int width, int height){
+        this.width = width;
+        this.height = height;
+    }
+
+    //면적 구하기
+    public int getArea(){
+        return width * height;
+    }
+}
+
+//AreaConverter
+public class AreaConverter{
+    //변환할 단위 상수들
+    private static final double INCH_TERM = 0.0245d;
+    private static final double FEET_TERM = 0.3048d;
+
+    //인치로 변환
+    public double metersToInches(int arae){
+        return area / INCH_TERM;
+    }
+
+    //피트로 변환
+    public double metersToFeet(int arae){
+        return area / FEET_TERM;
+    }
+}
+```
+**OCP (Open-Closed) 개방-폐쇄 원칙** <br>
+**LSP (Liskov Substitution) 리스코프 치환 원칙** <br>
+**ISP (Interface Segregation) 인터페이스 분리 원칙** <br>
+**DIP (Dependency Inversion) 의존 역전 원칙** <br>
